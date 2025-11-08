@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "48962575145",
+    "project_id": "flutter-bloc-riverpod",
+    "storage_bucket": "flutter-bloc-riverpod.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48962575145:android:b6d8c7ca39a3da884e7538",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5NQGiJyeKl0jVl77TDAXS_d_pMuQBs-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48962575145:android:baf4727e5c36df754e7538",
+        "android_client_info": {
+          "package_name": "com.example.flutter_bloc_riverpod"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5NQGiJyeKl0jVl77TDAXS_d_pMuQBs-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48962575145:android:62f40729f0ea2d774e7538",
+        "android_client_info": {
+          "package_name": "com.flutter.bloc.riverpod.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5NQGiJyeKl0jVl77TDAXS_d_pMuQBs-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
