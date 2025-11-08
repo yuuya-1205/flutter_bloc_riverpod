@@ -17,13 +17,7 @@ class TodoRepository {
         .collection('todos')
         .get();
     return todos.docs
-        .map(
-          (doc) => TodoDto(
-            todoId: doc.id,
-            title: doc.data()['title'] as String,
-            isCompleted: doc.data()['isCompleted'] as bool,
-          ),
-        )
+        .map((doc) => TodoDto(title: doc.data()['title'] as String))
         .toList();
   }
 }
