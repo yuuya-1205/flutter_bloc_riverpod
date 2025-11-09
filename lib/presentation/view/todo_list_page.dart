@@ -12,11 +12,18 @@ class TodoListPage extends StatelessWidget {
       body: Center(
         child: Consumer(
           builder: (context, ref, child) {
-            return FutureBuilder(
-              future: ref.watch(todoRepositoryProvider).fetchTodos(),
+            return StreamBuilder(
+              stream: ref.watch(todoRepositoryProvider).fetchTodos(),
               builder: (context, snapshot) {
                 return Column(
-                  children: [Text('${snapshot.data?.length} todos')],
+                  children: [
+                    Text('${snapshot.data?.length} todos'),
+                    ElevatedButton(
+                      onPressed: () =>
+                          ref.read(todoRepositoryProvider).addTodo('test'),
+                      child: const Text('Add Todo'),
+                    ),
+                  ],
                 );
               },
             );
