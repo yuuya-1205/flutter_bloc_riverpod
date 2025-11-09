@@ -11,13 +11,21 @@ class TodoRepository {
 
   final Ref ref;
 
-  Future<List<TodoDto>> fetchTodos() async {
-    final todos = await ref
+  Stream<List<TodoDto>> fetchTodos() {
+    return ref
         .read(firebaseFirestoreProvider)
         .collection('todos')
-        .get();
-    return todos.docs
-        .map((doc) => TodoDto(title: doc.data()['title'] as String))
-        .toList();
+        .snapshots()
+        .map(
+          (snapshot) => snapshot.docs
+              .map((doc) => TodoDto(title: doc.data()['title'] as String))
+              .toList(),
+        );
+  }
+
+  Future<void> addTodo(String title) async {
+    await ref.read(firebaseFirestoreProvider).collection('todos').add({
+      'title': title,
+    });
   }
 }
